@@ -17,12 +17,13 @@ private:
     ListLinked<TableEntry<V>>* table; // Array de listas enlazadas
 
     int hashFunction(const std::string& key) const {
-        int hash = 0;
-        for (char c : key) {
-            hash = (31 * hash + static_cast<int>(c)) % max;
-        }
-        return hash;
+    int hash = 0;
+    for (size_t i = 0; i < key.size(); ++i) {
+        hash += int(key.at(i)); // Obtener el valor ASCII usando int(c)
     }
+    return hash % max; // Calcular el resto de la división por el tamaño de la tabla hash
+}
+
 
 public:
     HashTable(int size) : n(0), max(size) {
