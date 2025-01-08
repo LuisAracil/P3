@@ -6,7 +6,7 @@
 #include "Dict.h"
 #include "TableEntry.h"
 
-#include "../PRA_2425_P1/ListLinked.h"  // ¡¡¡¡MODIFICAR!!!!
+#include "../P1/ListLinked.h"  // ¡¡¡¡MODIFICAR!!!!
 
 // Clase HashTable<V>
 template <typename V>
